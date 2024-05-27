@@ -10,7 +10,6 @@ import {Contact} from './Components/Pages/Contact-us/Contact';
 import { Careers } from './Components/Pages/Careers/Careers';
 import { Beauty} from './Components/Pages/Beauty/Beauty';
 import {Mobile} from './Components/Pages/Mobile/Mobile';
-// import {Fashion} from './Components/Pages/Fashion/Fashion';
 import {Grocery} from './Components/Pages/Grocery/Grocery';
 import {HomeFurniture} from './Components/Pages/HomeFurniture/HomeFurniture';
 import { Dresses} from './Components/Pages/Dresses/Dresses';
@@ -31,6 +30,7 @@ export default  function App() {
 <BrowserRouter>
 <Navbar/> 
  <Navbar2/> 
+
 
 
 <Routes>
