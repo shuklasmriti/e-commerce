@@ -23,7 +23,7 @@ export const Navbar2 = () => {
     <div className='beauty'><Link className='link' to={'/beauty'}>BEAUTY-PRODUCTS
     {/* <img src="https://rukminim2.flixcart.com/flap/64/64/image/69c6589653afdb9a.png?q=100" alt="" /> */}
     </Link></div>
-    <div className='dresses'><Link className='link' to={'/dresses'}>  WOMEN-DRESSES
+    <div className='dresses'><Link className='link' to={'/dresses'}> DRESSES
     {/* <img src="https://rukminim2.flixcart.com/flap/64/64/image/69c6589653afdb9a.png?q=100"  alt="" /> */}
     </Link>
     </div>
