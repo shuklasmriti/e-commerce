@@ -46,7 +46,7 @@ export const SinglePage = () => {
           <img src={categoryData?.thumbnail} alt="" />
         </div>
         <div className="cart-content">
-          <div className="price">Price:Rs.{categoryData?.price * 80}</div>
+          <div className="price">Price:Rs.{Math.round(categoryData?.price * 80)}</div>
           <div className="cart">
 
             
