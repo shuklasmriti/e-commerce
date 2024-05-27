@@ -1,17 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import App from './App'; // App component ka import
+import { CartProvider } from './context/CartContext';
+import { WishlistProvider } from './context/WishlistContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
+ 
+    <CartProvider>
+      <WishlistProvider>
     <App />
-  </React.StrictMode>
+    </WishlistProvider>
+    </CartProvider>
+  </React.StrictMode>,
+  document.getElementById('root') // HTML main div jo id 'root' se refer kiya gaya hai
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

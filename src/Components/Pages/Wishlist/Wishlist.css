@@ -1,0 +1,39 @@
+.wish{
+    /* height: 100vh; */
+    margin-top: 10rem;
+    /* background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    padding-left: 5rem;
+    padding-top: 2rem;
+    gap:7rem;
+    min-height: calc(100vh - 27rem);
+
+}
+
+.wish-heading{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.wish-image{
+    display: flex;
+    justify-content: center;
+}
+
+.wish-card{
+    /* background-color: red; */
+    width: 20rem;
+    height: 20rem;
+}
+.buttons{
+    display: flex;
+    /* padding-left: 5rem;
+    padding-top: 1rem; */
+    padding: 2px;
+    gap: 9px;
+    height: 2rem;
+    margin-left: 3rem;
+    width: 21rem;
+}

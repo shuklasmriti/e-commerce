@@ -1,0 +1,137 @@
+
+
+.navbar{
+    background-color:#f5f4f4;
+
+    width: 100vw;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.logo img{
+    width: 88px;
+    height: 75px;
+    /* border-radius: 30%; */
+    margin-left: 7rem;
+    margin-top: 0.4rem;
+    border-radius: 20px;
+    border: 1px solid blue;
+}
+.search{
+    /* background-color: blue; */
+    width: 20rem;
+    margin-top: -3.5rem;
+    margin-left: 30rem;
+    
+}
+
+.search input{
+    width: 30rem;
+    height: 30px;
+    /* margin-left: 30rem; */
+    /* background-color:#9fbbab ; */
+
+    background-color: white;
+    text-align: center;
+font-style:normal;
+font-weight: 500;
+font-size:medium;
+border: 1px solid black; 
+border-radius: 20px;
+ /* color:rgb(7, 7, 7); */
+ 
+
+}
+
+.icons{
+
+/* background-color: blue; */
+width: 300px;
+    display: flex;
+    margin-left: 58rem;
+    margin-top: -45px;
+    height: 38px;
+    gap: 40px;
+    z-index: 1;
+    color: black;
+}
+.but{
+    width: 5rem;
+    height: 2rem;
+    background-color:white;
+    border-radius: 10%;
+}
+.wishlist-count {
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+  .cart-num{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    width: 18px;
+    font-weight: 300;
+    position: relative;
+    background-color: red;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    margin-top: -2.5rem;
+    margin-left: 0.5rem;
+  }
+
+
+@media screen and (max-width: 480px){
+
+    .navbar{
+        width: 100vw;
+        height: 14rem;
+    }
+    .logo{
+        width: 27rem;
+        /* height:20rem; */
+    }
+    .logo img{
+        width: 277px;
+        height: 204px;
+        margin-top: 10px;
+        padding: 2px;
+    /* margin-left: 0rem;
+    margin-top: -0.5rem; */
+    }
+    
+    .search{
+        /* width: 10rem; */
+        margin-left: 30rem;
+    }
+    .search input{
+        width:89vw;
+        /* height: 20rem; */
+    }
+    .icons{
+        margin-left: 14rem;
+        width: 2px;
+        height: 2px;
+        gap: 16px;
+       }
+    
+    
+}
+@media screen and (min-width:481px) and (max-width:767px){
+    .search {
+       
+        margin-left: 10rem;
+    }
+    .search input{
+        width: 19rem;
+    }
+   
+    
+    
+}

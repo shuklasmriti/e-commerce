@@ -1,0 +1,217 @@
+.buy-now{
+    text-align: center;
+    border-radius: 0.25rem;
+    color: #fff;
+      font-weight: bold;
+}
+.buy-now-but{
+    width: 100%;
+    background-color: #0b7a74;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: bold;
+
+}
+.custom-dialog > * {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .custom-dialog-enter {
+    opacity: 0;
+  }
+  
+  .custom-dialog-enter-active {
+    opacity: 1;
+    transition-duration: 300ms;
+  }
+  
+  .custom-dialog-exit {
+    opacity: 1;
+  }
+  
+  .custom-dialog-exit-active {
+    opacity: 0;
+    transition-duration: 200ms;
+  }
+  .trns{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  background-color:grey;
+  /* color: red; */
+  opacity: 0.89;
+  }
+  .fxd{
+    position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+    overflow-y: auto;
+  margin-top: 5rem;
+  
+
+  }
+  .flx-cont{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; Adjust as needed */
+    text-align: center;
+  }
+  .enter{
+    transition: opacity 300ms ease-out;
+  }
+
+  .enter-from{
+    opacity: 0;
+    transform: scale(0.95);
+  }
+.enter-to{
+    opacity: 1;
+  transform: scale(1);
+}
+.leave{
+    transition: opacity 200ms ease-in;
+}
+.leave-from{
+    opacity: 1;
+    transform: scale(1);
+}
+.leave-to{
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+  .dialog-panel{
+    width: 100%;
+  max-width: 28rem; /* Adjust as needed */
+  transform: none;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 0.5rem; /* Adjust as needed */
+  text-align: left;
+  vertical-align: middle;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #f9fafb;
+}
+.flex-container{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+  .flex-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+}
+.fll-width{
+    width: 100%;
+    border-radius: 0.375rem; }
+    @media (min-width: 768px) {
+        .fll-width {
+          margin-top: 0;
+        }
+      }
+      
+      @media (min-width: 640px) {
+        .fll-width{
+          max-width: 28rem; /* Adjust as needed */
+        }
+      }
+      
+      @media (min-width: 1280px) {
+        .fll-width{
+          padding: 0;
+        }
+      }
+      .fll-width-cls{
+        padding: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;}
+        @media (min-width: 768px) {
+            .fll-width-cls{
+              margin-top: 1.5rem;
+              margin-bottom: 1.5rem;
+            }
+          }
+          
+          @media (min-width: 640px) {
+            .fll-width-cls {
+              padding: 2rem; /* Adjust as needed */
+            }
+          }
+          .frm > * + * {
+            margin-top: 1rem;
+
+          }
+          
+@media (min-width: 768px) {
+    .frm > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+     .lbl-name{
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #1a202c;
+     } 
+.input-field{
+    border: 1px solid #cbd5e0; /* Border color */
+    outline: none; /* Remove outline */
+    border-radius: 0.375rem; /* Rounded corners */
+    color: #1a202c; /* Text color */
+    font-size: 0.875rem; /* Font size */
+    width: 100%; /* Full width */
+    padding: 0.625rem; /* Padding */
+    background-color: #f7fafc; /* Background color */
+  }
+  
+  .input-field:focus {
+    border-color: #38a169; /* Border color on focus */
+    outline: none; /* Remove outline on focus */
+  }
+.adresss{
+    display: block;
+    margin-bottom: 0.5rem; 
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1a202c;
+}
+.pay-butt{
+    outline: none; /* Remove outline */
+    width: 100%; /* Full width */
+    color: white; /* Text color */
+    background-color: #0b7a74; /* Background color */
+    border: none; /* Remove border */
+    border-radius: 0.375rem; /* Rounded corners */
+    font-weight: 500; /* Font weight */
+    font-size: 0.875rem; /* Font size */
+    padding: 0.625rem 1.25rem; /* Padding */
+    cursor: pointer; /* Cursor style */
+    margin-top: 2rem;
+  }
+  
+  .pay-butt:hover,
+  .pay-butt:focus {
+    background-color: #0b7a74; /* Background color on hover/focus */
+  
+}

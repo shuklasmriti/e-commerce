@@ -1,0 +1,26 @@
+.pics{
+margin-left: 18px;
+}
+
+.pic2 img {
+    width:96.5%;
+    height:20rem;
+}
+.pic1 img{
+    width:96.5%;
+    height:20rem;
+}
+.pic3 img{
+    width:96.5%;
+    height:20rem;
+}
+@media screen and (max-width: 480px){
+.pics{
+    width:90.5%;
+    height:15rem;
+}
+.slick-slide img{
+width: 92%;
+height: 12rem;
+}
+}

@@ -1,0 +1,18 @@
+.home{
+    /* width: 99.9vw; */
+    height: 390px;
+    /* background-color:red ; */
+    /* margin-top: 20rem; */
+    /* flex: 1;  */
+  /* padding: 20px; */
+  margin-top:136px;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 480px){
+.home{
+  height: 280px;
+}
+}

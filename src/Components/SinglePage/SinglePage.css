@@ -1,0 +1,133 @@
+.SinglePage{
+    /* background-color: yellow; */
+    width: 81rem;
+    margin: 1rem;
+    height:80vh;
+    margin-top: 8.5rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items:center;
+    gap: 3rem;
+}
+.image-content{
+    /* background-color:aqua; */
+    width: 23rem;
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  gap: 1.5rem;
+
+    /* padding:10px; */
+}
+.single-image{
+    /* background-color: pink; */
+    width: 22rem;
+    height: 19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+}
+.single-image img{
+    width:22rem ;
+    height: 19rem;
+}
+.cart-content{
+    /* background-color: violet; */
+    width: 28rem;
+    height: 4rem;
+    display: flex;
+    gap: 1rem;
+    justify-content:space-around;
+    align-items:center;
+    border: 1px solid rgb(212, 208, 208);
+}
+.price{
+    /* background-color: brown; */
+    width:30rem;
+display:flex;
+justify-content: center;
+align-items: center;
+    height: 3rem;
+
+}
+.wishlist{
+    /* background-color: blueviolet; */
+    width:31rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart{
+    /* background-color: chartreuse; */
+    width: 22rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+button{
+    cursor: pointer;
+    width: 8rem;
+}
+.description-content{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+    height: 17rem;
+    width: 23rem;
+    margin-top: -13rem;
+}
+.single-title{
+    /* background-color:orange; */
+    width: 20rem;
+    height: 3rem;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    font-size: larger;
+}
+.single-description{
+    /* background-color: red; */
+    width: 20rem;
+    display: flex;
+    justify-content:left;
+    /* align-items: center; */
+    height: 10rem;
+}
+
+@media screen and (max-width: 480px){
+    .single-title{
+        margin-left: -45rem;
+    margin-top: -21rem;
+    }
+    .SinglePage{
+        justify-content: flex-start;
+    height: 40vh;
+    gap: 1rem;
+    margin-top: 17.5rem;
+    }
+ .single-description{
+    margin-left: -45rem;
+    height: 5rem;
+ }
+ .single-image img{
+    width: 235px;
+    height: 13rem;
+ }
+.image-content{
+    height: 20rem;
+    gap: 0rem;
+}
+}

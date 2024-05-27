@@ -1,0 +1,26 @@
+.CardContainer{
+    /* background-color:blue; */
+    width:78rem;
+    top: 0;
+    margin-left:18px;
+    /* height: 30rem; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    border: 1px solid rgb(201, 196, 196);
+    padding-top: 43px;
+    padding-left:46px;
+    gap: 20px;
+
+}
+@media screen and (max-width: 480px) {
+    .CardContainer{
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        /* width: 91vw;
+        height:84rem; */
+        
+    }
+}

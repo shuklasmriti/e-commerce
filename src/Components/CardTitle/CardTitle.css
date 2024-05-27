@@ -1,0 +1,8 @@
+.CardTitle{
+    width: 14rem;
+    height: 2rem;
+    background-color: green;
+    display: flex;
+
+    margin-top: 169px
+}

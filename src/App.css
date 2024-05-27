@@ -1,18 +1,56 @@
-.App {
-  text-align: center;
+@import url(../src/Components/Navbar/Navbar.css);
+@import url(../src/Components/Navbar/Navbar2.css);
+@import url(../src/Components/Footer/Footer.css);
+@import url(../src/Components/Pages/Home/Home.css);
+@import url(../src/Components/Pages/About-us/About.css);
+@import url(../src/Components/Pages/Dresses/Dresses.css);
+@import url(../src/Components/Pages/Careers/Careers.css);
+@import url(../src/Components/Pages/Contact-us/Contact.css);
+@import url(../src/Components/Pages/Beauty/Beauty.css);
+/* @import url(../src/Components/Pages/Fashion/Fashion.css); */
+@import url(../src/Components/Pages/Grocery/Grocery.css);
+@import url(../src/Components/Pages/HomeFurniture/HomeFurniture.css);
+@import url(../src/Components/Pages/Mobile/Mobile.css);
+@import url(../src/Components/Pages/Bikes/Bikes.css);
+@import url(../src/Components/Slider2/Slider2.css);
+@import url(../src/Components/Card-Container/CardContainer.css);
+@import url(../src/Components/Cards/Cards.css);
+@import url(../src/Components/CardTitle/CardTitle.css);
+@import url(../src/Components/SinglePage/SinglePage.css);
+@import url(../src/Components/Pages/SingleCategory/SingleCategory.css);
+@import url(../src/Components/Cart/Cart.css);
+@import url(../src/Components/Pages/Login/Login.css);
+@import url(../src/Components/Pages/Wishlist/Wishlist.css);
+@import url(../src/Components/Slider/Slider.css);
+@import url(../src/Components/Modal/Modal.css);
+
+body {
+  display: flex;
+  flex-direction: column;
+/* width: 100vw; */
+  margin: 0;
 }
 
-.App-logo {
+
+/* .App {
+  text-align: center;
+} */
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
+} */
+.link{
+    text-decoration: none; 
+    color: inherit; 
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+  } */
+/* } */
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,13 +64,6 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
