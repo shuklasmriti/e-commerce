@@ -1,4 +1,4 @@
-{ "homepage":"https://shuklasmriti.github.io/e-commerce-FusionFinds",
+{ "homepage":"https://shuklasmriti.github.io/",
   "name": "my-react-app",
   "version": "1.0.0",
   "private": true,
@@ -19,6 +19,7 @@
     "react-toastify": "^10.0.5",
     "slick-carousel": "^1.8.1"
   },
+ 
   "scripts": {
     "start": "react-scripts start",
 
