@@ -14,9 +14,9 @@ import { WishlistContext } from "../../context/WishlistContext";
 
 <link rel="stylesheet" href="./src/Components/Navbar/Navbar.css" />;
 
-export const Navbar = ({ wishlistCount }, { count }) => {
+export const Navbar = () => {
   const [searchResults, setSearchResults] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const { cart } = useContext(CartContext);
   const { wishlist} =
@@ -58,7 +58,7 @@ export const Navbar = ({ wishlistCount }, { count }) => {
           onKeyDown={handleKeyPress}
           placeholder="Type something and press Enter"
         />
-         {isLoading && <p>Loading...</p>}
+         {/* {isLoading && <p>Loading...</p>} */}
         <ul>
           {searchResults?.map((result) => (
             <li key={result?.id}>{result?.name}</li>

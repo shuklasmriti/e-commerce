@@ -22,19 +22,23 @@ export const SinglePage = () => {
 
   const [categoryData, setCategoryData] = useState({});
 
-  const fetchCategoryData = async () => {
-    try {
-      const res = await fetch(` https://dummyjson.com/products/${id}`);
-      const jsonn = await res.json();
-      setCategoryData(jsonn);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+ 
 
   useEffect(() => {
+
+    const fetchCategoryData = async () => {
+      try {
+        const res = await fetch(` https://dummyjson.com/products/${id}`);
+        const jsonn = await res.json();
+        setCategoryData(jsonn);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+
     fetchCategoryData();
-  }, [fetchCategoryData]);
+  }, [id]);
   // console.log(categoryData);
   // console.log(cart);
   // console.log(cart?.includes(categoryData));

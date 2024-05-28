@@ -4,21 +4,26 @@ import  Cards  from "../Cards/Cards";
 export const CardContainer = ({ category }) => {
 
   const [categoryData,setCategoryData]= useState([])
-  const fetchCategoryData = async () => {
-    try {
-      const res = await fetch(
-       ` https://dummyjson.com/products/category/${category}`
-      );
-      const jsonn = await res.json();
-      setCategoryData(jsonn.products);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  
 
   useEffect(()=>{
+    const fetchCategoryData = async () => {
+      try {
+        const res = await fetch(
+         ` https://dummyjson.com/products/category/${category}`
+        );
+        const jsonn = await res.json();
+        setCategoryData(jsonn.products);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    
     fetchCategoryData();
-  },[fetchCategoryData])
+
+    
+  },[category])
   return <div className="CardContainer">
    
     {categoryData?.map((obj)=>(
