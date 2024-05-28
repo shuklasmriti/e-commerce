@@ -12,7 +12,7 @@ const Search = () => {
     } else {
       setSearchResults([]);
     }
-  }, [searchQuery]);
+  }, [fetchData]);
 
   const fetchData = async () => {
     setIsLoading(true);

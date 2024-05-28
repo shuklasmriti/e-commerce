@@ -3,12 +3,12 @@ import { useContext  } from "react";
 
 import Modal from "../Modal/Modal";
 import { CartContext } from "../../context/CartContext";
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 // import { deleteFromCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addDoc, collection } from 'firebase/firestore';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 export const Cart = () => {
   const [count, setCount] = useState(1);

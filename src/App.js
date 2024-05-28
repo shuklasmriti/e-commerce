@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter ,Form,Route,Routes} from "react-router-dom";
+import {BrowserRouter ,Route,Routes} from "react-router-dom";
 import { Footer } from './Components/Footer/Footer';
 import { Navbar } from './Components/Navbar/Navbar';
 import { Navbar2 } from './Components/Navbar/Navbar2';
@@ -15,11 +15,9 @@ import {HomeFurniture} from './Components/Pages/HomeFurniture/HomeFurniture';
 import { Dresses} from './Components/Pages/Dresses/Dresses';
 import {Bikes} from './Components/Pages/Bikes/Bikes';
 import { SinglePage } from './Components/SinglePage/SinglePage';
-import  SingleCategory  from './Components/Pages/SingleCategory/SingleCategory';
 import { Cart } from './Components/Cart/Cart';
 import Login from './Components/Pages/Login/Login';
 import {Wishlist} from './Components/Pages/Wishlist/Wishlist';
-import {Search} from './Components/Search/Search'
 import Modal from './Components/Modal/Modal';
 
 export default  function App() {

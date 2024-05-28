@@ -7,7 +7,6 @@ import { useParams ,useNavigate} from "react-router-dom";
 import { useState, useEffect } from "react";
 // import { Link } from 'react-router-dom';
 // import { Cart } from "../Cart/Cart";
-import { Wishlist } from "../Pages/Wishlist/Wishlist";
 import { CartContext } from "../../context/CartContext";
 import { WishlistContext } from "../../context/WishlistContext";
 // import { WishlistContext } from "../../context/WishlistContext";
@@ -19,7 +18,7 @@ export const SinglePage = () => {
   const navigate=useNavigate();
 
   const { addToCart, cart } = useContext(CartContext);
-  const { addToWishlist, wishlist ,handleAddToWishlist } = useContext(WishlistContext);
+  const {  wishlist ,handleAddToWishlist } = useContext(WishlistContext);
 
   const [categoryData, setCategoryData] = useState({});
   const fetchCategoryData = async () => {
@@ -35,8 +34,8 @@ export const SinglePage = () => {
   useEffect(() => {
     fetchCategoryData();
   }, []);
-  console.log(categoryData);
-  console.log(cart);
+  // console.log(categoryData);
+  // console.log(cart);
   // console.log(cart?.includes(categoryData));
 
   return (
