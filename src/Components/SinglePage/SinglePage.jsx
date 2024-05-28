@@ -34,7 +34,7 @@ export const SinglePage = () => {
 
   useEffect(() => {
     fetchCategoryData();
-  }, [fetchCategoryData()]);
+  }, [fetchCategoryData]);
   // console.log(categoryData);
   // console.log(cart);
   // console.log(cart?.includes(categoryData));
