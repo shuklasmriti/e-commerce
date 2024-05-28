@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/e-commerce-FusionFinds/static/css/main.05f59b7f.css",
+    "main.js": "/e-commerce-FusionFinds/static/js/main.e96a58d4.js",
+    "static/media/Fragrance.png": "/e-commerce-FusionFinds/static/media/Fragrance.b2cb1dc8c6b37bb20297.png",
+    "static/media/skincare.png": "/e-commerce-FusionFinds/static/media/skincare.51911260f2488b583778.png",
+    "static/media/logo2.png": "/e-commerce-FusionFinds/static/media/logo2.ed6a1b1345d3284a570b.png",
+    "static/media/slick.svg": "/e-commerce-FusionFinds/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/e-commerce-FusionFinds/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/e-commerce-FusionFinds/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/e-commerce-FusionFinds/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/e-commerce-FusionFinds/index.html",
+    "main.05f59b7f.css.map": "/e-commerce-FusionFinds/static/css/main.05f59b7f.css.map",
+    "main.e96a58d4.js.map": "/e-commerce-FusionFinds/static/js/main.e96a58d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05f59b7f.css",
+    "static/js/main.e96a58d4.js"
+  ]
+}
