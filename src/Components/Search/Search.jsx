@@ -5,14 +5,6 @@ const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    // Fetch data from the API when searchQuery changes
-    if (searchQuery.trim() !== '') {
-      fetchData();
-    } else {
-      setSearchResults([]);
-    }
-  }, [fetchData]);
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -30,6 +22,14 @@ const Search = () => {
     setSearchQuery(event?.target?.value);
   };
 
+  useEffect(() => {
+    // Fetch data from the API when searchQuery changes
+    if (searchQuery.trim() !== '') {
+      fetchData();
+    } else {
+      setSearchResults([]);
+    }
+  }, [fetchData]);
   return (
     <div>
       <input

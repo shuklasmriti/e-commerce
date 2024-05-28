@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useContext  } from "react";
 
 import Modal from "../Modal/Modal";
@@ -7,11 +7,11 @@ import { CartContext } from "../../context/CartContext";
 // import { deleteFromCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addDoc, collection } from 'firebase/firestore';
+// import { addDoc, collection } from 'firebase/firestore';
 // import { Link } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 export const Cart = () => {
-  const [count, setCount] = useState(1);
+  // const [count, setCount] = useState(1);
 
 const [name,setName]=useState("")
 const [address,setAddress] =useState("")
@@ -19,7 +19,7 @@ const [pincode,setPincode] =useState("")
 const [phoneNumber,setPhoneNumber] =useState("")
 const [Razorpay] = useRazorpay();
   const buyNow = async () => {
-    if (name === "" || address == "" || pincode == "" || phoneNumber == "") {
+    if (name === "" || address === "" || pincode === "" || phoneNumber === "") {
       return toast.error("All fields are required", {
         position: "top-center",
         autoClose: 1000,
@@ -31,13 +31,13 @@ const [Razorpay] = useRazorpay();
         theme: "colored",
       })
     }
-    const addressInfo = {
-      name,
-      address,
-      pincode,
-      phoneNumber,
+    // const addressInfo = {
+    //   name,
+    //   address,
+    //   pincode,
+    //   phoneNumber,
      
-    }
+    // }
     var options = {
       key: "rzp_test_9V2hrDbFaDSxRx"
       ,
@@ -58,26 +58,26 @@ const [Razorpay] = useRazorpay();
         // console.log(response)
         toast.success('Payment Successful')
           // console.log(response, "data in response")
-        const paymentId = response.razorpay_payment_id
+        // const paymentId = response.razorpay_payment_id
 
         // console.log(paymentId, "data in paymentId")
 
         // store in firebase 
-        const orderInfo = {
-          // cartItems,
-          // addressInfo,
-          date: new Date().toLocaleString(
-            "en-US",
-            {
-              month: "short",
-              day: "2-digit",
-              year: "numeric",
-            }
-          ),
-          email: JSON.parse(localStorage.getItem("user")).user.email,
-          userid: JSON.parse(localStorage.getItem("user")).user.uid,
-          paymentId
-        }
+        // const orderInfo = {
+        //   // cartItems,
+        //   // addressInfo,
+        //   date: new Date().toLocaleString(
+        //     "en-US",
+        //     {
+        //       month: "short",
+        //       day: "2-digit",
+        //       year: "numeric",
+        //     }
+        //   ),
+        //   email: JSON.parse(localStorage.getItem("user")).user.email,
+        //   userid: JSON.parse(localStorage.getItem("user")).user.uid,
+        //   paymentId
+        // }
 
         // try {
         //   const result = addDoc(collection(fireDB, "orders"), orderInfo)
@@ -96,12 +96,12 @@ const [Razorpay] = useRazorpay();
 
  
   const { cart,  removeFromCart ,modifyCartItemQuantity } = useContext(CartContext);
- const[isAdded,setIsAdded]=useState(false);
+//  const[isAdded,setIsAdded]=useState(false);
 
-  const handleDelete = (id) => {
-    removeFromCart(id);
+  // const handleDelete = (id) => {
+  //   removeFromCart(id);
 
-  };
+  // };
 
  
 

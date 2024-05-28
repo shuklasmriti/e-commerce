@@ -18,7 +18,7 @@ export const CardContainer = ({ category }) => {
 
   useEffect(()=>{
     fetchCategoryData();
-  },[])
+  },[fetchCategoryData])
   return <div className="CardContainer">
    
     {categoryData?.map((obj)=>(

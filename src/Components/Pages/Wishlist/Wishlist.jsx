@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from 'react'
 import { useContext } from 'react';
-import { SinglePage } from '../../SinglePage/SinglePage';
+// import { SinglePage } from '../../SinglePage/SinglePage';
 import { CartContext } from '../../../context/CartContext';
 import { WishlistContext } from '../../../context/WishlistContext';
-import Cart from '../../Cart/Cart';
+// import Cart from '../../Cart/Cart';
 import {Link} from 'react-router-dom'
 // import { WishlistContext } from '../../../context/WishlistContext'; 
 
@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom'
 
 export const Wishlist = () => {
   const {addToCart}=useContext(CartContext);
-const {wishlist ,addToWishlist ,removeFromWishlist }=useContext(WishlistContext)
+const {wishlist ,removeFromWishlist }=useContext(WishlistContext)
 
 
 const[wishlistCount,setWishlistCount]=useState(0);

@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import FusionFindsLogo from "../Assets/logo2.png";
 import Badge from "@mui/material/Badge";
-import Search from "../Search/Search";
+// import Search from "../Search/Search";
 import { CiSearch } from "react-icons/ci";
-import { FaUser } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
@@ -18,8 +18,8 @@ export const Navbar = ({ wishlistCount }, { count }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const { cart, Cart, removeFromCart } = useContext(CartContext);
-  const { wishlist, Wishlist, removeFromWishlist } =
+  const { cart } = useContext(CartContext);
+  const { wishlist} =
     useContext(WishlistContext);
 
   const handleInputChange = (event) => {

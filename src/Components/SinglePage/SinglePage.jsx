@@ -21,6 +21,7 @@ export const SinglePage = () => {
   const {  wishlist ,handleAddToWishlist } = useContext(WishlistContext);
 
   const [categoryData, setCategoryData] = useState({});
+
   const fetchCategoryData = async () => {
     try {
       const res = await fetch(` https://dummyjson.com/products/${id}`);
@@ -33,7 +34,7 @@ export const SinglePage = () => {
 
   useEffect(() => {
     fetchCategoryData();
-  }, []);
+  }, [fetchCategoryData()]);
   // console.log(categoryData);
   // console.log(cart);
   // console.log(cart?.includes(categoryData));

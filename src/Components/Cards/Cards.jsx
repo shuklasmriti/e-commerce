@@ -10,7 +10,7 @@ import {useNavigate} from 'react-router-dom'
 <div className="cards" key={item?.id} onClick={()=>
   navigate(`/singlepage/${item?.id}`)
 } >
-  <img className='image' src={item?.thumbnail} />
+  <img className='image' src={item?.thumbnail} alt='no image'/>
   
   <h4 className='Card-title-name' >{item?.title} </h4>
   <h5 className='Card-price'>Price:Rs.{Math.round(item?.price*80)}</h5>
