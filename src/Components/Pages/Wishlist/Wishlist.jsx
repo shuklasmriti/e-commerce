@@ -18,7 +18,7 @@ const[wishlistCount,setWishlistCount]=useState(0);
 
 useEffect(()=>
 {
-  setWishlistCount(wishlist.lenght);
+  setWishlistCount(wishlist.length);
 },[wishlist]);
 
 const handleDelete = (id) => {
@@ -53,7 +53,7 @@ const handleDelete = (id) => {
   </div>
 </div>
 ))}
-
+  <p>Total items in wishlist: {wishlistCount}</p>
 
 </div>
 </>
