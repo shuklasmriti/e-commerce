@@ -2,14 +2,11 @@ import React, { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { useParams ,useNavigate} from "react-router-dom";
-// import { useNavigate } from 'react-router-dom';
 
 import { useState, useEffect } from "react";
-// import { Link } from 'react-router-dom';
-// import { Cart } from "../Cart/Cart";
+
 import { CartContext } from "../../context/CartContext";
 import { WishlistContext } from "../../context/WishlistContext";
-// import { WishlistContext } from "../../context/WishlistContext";
 
 <link rel="stylesheet" href="./Components/SinglePage/SinglePage.css" />;
 
@@ -39,9 +36,6 @@ export const SinglePage = () => {
 
     fetchCategoryData();
   }, [id]);
-  // console.log(categoryData);
-  // console.log(cart);
-  // console.log(cart?.includes(categoryData));
 
   return (
     <div className="SinglePage">
@@ -65,7 +59,7 @@ export const SinglePage = () => {
          <FaShoppingCart size={17} />
             </button>
           </div>
-          <div className="wishlist">
+          <div className="wishlist-btn">
             <button onClick={() => handleAddToWishlist(categoryData)}>
               {wishlist?.includes(categoryData)
                 ? "Remove "

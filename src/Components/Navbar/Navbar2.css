@@ -1,59 +1,74 @@
-.navbar2{
+ .navbar2{
     width: 86%;
-    height: 50px;
+   height: 40px;
        background-color:#f5f4f4;
-
-
-
     margin-left: 6rem;
     display: flex;
- 
-    position: relative;
-    margin-top:94px;
-    /* border: 1px solid grey; */
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    /* position: relative;  */
+    margin-top:-43px;
+    border: 1px solid grey;
+     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     position: fixed;
-    z-index:999;
+    z-index:999; 
     
-}
-.container{
-    /* background-color: blue; */
-    width:84%;
-    margin-left: 4rem;
-    height: 40px;
+} 
+
+
+
+
+
+  .cont {
+    width: 100%;
+    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap:22px;
-    margin-top:10px;
+    gap: 22px;
     font-size: medium;
     font-style: normal;
     font-weight: 600;
-}
-@media screen and (max-width: 480px){
+  }
+
+@media (max-width:425px)
+{
     .navbar2{
-        display: none;
+        width: 98%;
+        height: 40px;
+       background-color:#f5f4f4;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: -43px;
+border: 1px solid grey;
+box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+position: fixed;
+z-index:999; 
+margin-left:2px;
     }
-    
+    .cont{
+        gap: 4px;
+        font-size:xx-small ;
+    }
 }
-@media screen and (min-width:481px) and (max-width:767px){
-.navbar2{
-    display: none;
+@media (min-width:426px) and (max-width:768px){
+    .navbar2{
+        margin-left: 9px;
+        width: 97%;
+    }
+    .cont{
+        font-size: small;
+        gap: 7px;
+    }
+}
+@media (min-width :769px) and (max-width:1200px){
+    .navbar2{
+        margin-left: 9px;
+        width: 97%;
+    }
+    .cont{
+        font-size: large;
+        gap: 15px;
+    }
+}
 
-}
-} 
-@media screen and (min-width:768px) and (max-width:1440px){
-.navbar2{
-    margin-left: 1rem;
-    height: 36px;
-    width: 96.5%;
-}
-.container{
-    height: 25px;
-    margin-left: 1rem;
-    width: 100%;
-}
-
-
-}

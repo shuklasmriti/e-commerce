@@ -3,7 +3,7 @@
 .navbar{
     background-color:#f5f4f4;
 
-    width: 100vw;
+    width: -webkit-fill-available;
     height: 90px;
     position: fixed;
     top: 0;
@@ -16,7 +16,7 @@
     margin-left: 7rem;
     margin-top: 0.4rem;
     border-radius: 20px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .search{
     /* background-color: blue; */
@@ -85,51 +85,85 @@ width: 300px;
     margin-top: -2.5rem;
     margin-left: 0.5rem;
   }
+  .navbar-toggle {
+    display:block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
 
+@media  (max-width: 425px){
 
-@media screen and (max-width: 480px){
-
-    .navbar{
-        width: 100vw;
-        height: 14rem;
-    }
-    .logo{
-        width: 27rem;
-        /* height:20rem; */
-    }
+   
     .logo img{
-        width: 277px;
-        height: 204px;
-        margin-top: 10px;
+        /* width: 277px;
+        height: 204px; */
+        margin-top: 6px;
         padding: 2px;
+        margin-left: 47px;
     /* margin-left: 0rem;
     margin-top: -0.5rem; */
     }
     
     .search{
         /* width: 10rem; */
-        margin-left: 30rem;
+        /* margin-left: 30rem; */
+        display: none;
     }
     .search input{
-        width:89vw;
+        /* width:89vw;
+        
+        */
         /* height: 20rem; */
+    display: none;
     }
     .icons{
-        margin-left: 14rem;
-        width: 2px;
-        height: 2px;
-        gap: 16px;
+        display: none;
+
+
+       }
+       .navbar-menu{
+
+       display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;}
+       .navbar-menu.show{
+        display: flex;
        }
     
     
 }
-@media screen and (min-width:481px) and (max-width:767px){
+@media screen and (min-width:426px) and (max-width:768px){
     .search {
-       
-        margin-left: 10rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: auto;
+        /* margin-left: 20rem; */
     }
     .search input{
         width: 19rem;
+    }
+    .icons{
+        margin-left: 39rem;
+        width: 157px;
+        height: 27px;
+        gap: 29px;
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
     }
    
     

@@ -56,7 +56,7 @@ align-items: center;
     height: 3rem;
 
 }
-.wishlist{
+.wishlist-btn{
     /* background-color: blueviolet; */
     width:31rem;
     height: 3rem;
@@ -77,6 +77,7 @@ align-items: center;
 button{
     cursor: pointer;
     width: 8rem;
+    background-color: brown;
 }
 .description-content{
     /* background-color: blue; */
@@ -107,7 +108,7 @@ button{
     height: 10rem;
 }
 
-@media screen and (max-width: 480px){
+/* @media screen and (max-width: 425px){
     .single-title{
         margin-left: -45rem;
     margin-top: -21rem;
@@ -130,4 +131,4 @@ button{
     height: 20rem;
     gap: 0rem;
 }
-}
+} */
