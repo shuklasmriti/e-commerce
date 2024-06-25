@@ -1,10 +1,7 @@
-import { Card } from '@mui/material';
 import React from 'react';
 import { useState, useEffect } from "react";
 import { useSearchParams } from 'react-router-dom';
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import Cards from '../../Cards/Cards';
 <link rel="stylesheet" href="./Components/Pages/SearchPage/SearchPage.css" />
 
@@ -15,18 +12,14 @@ const SearchPage = () => {
   
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [inputValue, setInputValue] = useState("");
+    // const [inputValue, setInputValue] = useState("");
     console.log(search);
 
-    // const handleInputChange = (event) => {
-    //     setInputValue(event.target.value);
-    //   };
+    
       const handleKeyPress = (event) => {
-        // if (event.key === "Enter") {
         setIsLoading(true);
           fetch(`https://dummyjson.com/products/search?q=${search}`)
             .then((res) => res.json())
-            // .then(console.log);
             .then((data) => {
               setSearchResults(data?.products);
               setIsLoading(false);

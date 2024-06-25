@@ -1,15 +1,12 @@
 import React, { useContext } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import FusionFindsLogo from "../Assets/logo2.png";
 import Badge from "@mui/material/Badge";
-// import Search from "../Search/Search";
 import { CiSearch } from "react-icons/ci";
-// import { FaUser } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import { FaSignOutAlt } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
@@ -33,8 +30,7 @@ export const Navbar = () => {
   const [userData, setUserData] = useState(
     JSON.parse(sessionStorage.getItem("userData"))
   );
-  // console.log(userData);
-  const history = useNavigate();
+  // const history = useNavigate();
 
 const [dropdown,setDropdown]=useState(false);
 
@@ -81,9 +77,7 @@ const [dropdown,setDropdown]=useState(false);
                                 <form role="search" method="get" action="/searchpage">
                                     <div className="input-group">
                                         <input type="search" placeholder="Search your product" className="form-control" name="search"/>
-                                        {/* <button className="btn bg-white" type="submit">
-                                            <i className="fa fa-search"></i>
-                                        </button> */}
+                                       
                                     </div>
                                 </form>
                             </div>
