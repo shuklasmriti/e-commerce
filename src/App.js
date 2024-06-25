@@ -19,6 +19,7 @@ import { Cart } from './Components/Cart/Cart';
 import Login from './Components/Pages/Login/Login';
 import {Wishlist} from './Components/Pages/Wishlist/Wishlist';
 import Modal from './Components/Modal/Modal';
+import SearchPage from './Components/Pages/SearchPage/SearchPage';
 
 export default  function App() {
   return (
@@ -49,6 +50,8 @@ export default  function App() {
 <Route path='/login' element={<Login/>}/>
 <Route path='/wishlist' element={<Wishlist/>}/>
 <Route path='/modal' element={<Modal/>}/>
+<Route path='/searchpage' element={<SearchPage/>}/>
+
 
   </Routes>
   <Footer/>

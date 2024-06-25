@@ -5,13 +5,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
 <link rel="stylesheet" href="./Components/Pages/Login/Login.css" />
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+  const [username, setUsername] = useState('emilys');
+  const [password, setPassword] = useState('emilyspass');
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+   
 
     const response = await fetch('https://dummyjson.com/auth/login', {
       method: 'POST',
@@ -19,30 +21,36 @@ function Login() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        username: "kminchelle",
-        password: '0lelplR',
+        username: username,
+        password: password,
       })
     });
     const data = await response.json();
+    if (data.message !== "Invalid credentials") {
+      toast.success("Login Successfully!");
+      const wholeData = await fetch("https://dummyjson.com/user/me", {
+          method: 'GET',
+          headers: {
+              'Authorization': 'Bearer '+data.token,
+          },
+      })
 
-    if (response.ok) {
-      sessionStorage.setItem("userData", JSON.stringify(data));
-      setTimeout(function () {
-        toast.success("Log in Successfully !")
-      }, 5000);
-
-      navigate(-1)
-    } else {
-      console.error('Login failed');
-      toast.warning(" Invalid Credential !")
-    }
-  };
+      const userData = await wholeData.json();
+      sessionStorage.setItem("userData", JSON.stringify(userData));
+      navigate("/");
+      window.location.reload(true);
+      
+  }else{
+      toast.error("Invalid Credential!")
+  }
+  
+  }
 
   return (
     <>
       <ToastContainer limit={3}
         position="top-right"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -72,7 +80,7 @@ function Login() {
               className='username'
             />
             <div className='submit-cont'>
-              <button type='submit' className='sub-but'>Login</button>
+              <button type='submit' className='sub-but' onClick={handleSubmit}>Login</button>
             </div>
           </form>
         </div>

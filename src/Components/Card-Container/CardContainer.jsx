@@ -28,11 +28,11 @@ export const CardContainer = ({ category }) => {
    
     {categoryData?.map((obj)=>(
       
-   <>
+   
       <Cards item={obj} />
     
 
-   </>
+   
     
     ))}
   </div>;

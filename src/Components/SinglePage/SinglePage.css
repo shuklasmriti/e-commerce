@@ -1,8 +1,8 @@
 .SinglePage{
     /* background-color: yellow; */
-    width: 81rem;
+    /* width: 81rem; */
     margin: 1rem;
-    height:80vh;
+    /* height:80vh; */
     margin-top: 8.5rem;
     display: flex;
     position: relative;
@@ -107,6 +107,69 @@ button{
     /* align-items: center; */
     height: 10rem;
 }
+
+
+@media (max-width:425px){
+    .SinglePage{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin-top: 9rem;
+        gap: 12rem;
+        /* margin: 0.6rem; */
+    }
+    .single-title{
+        margin-left: 0;
+        margin-top: 0;
+        width: 90%;
+    }
+    .image-content{
+        width: 87%;
+        height: auto;
+        gap: 1rem;
+        margin-left: 0px;
+        margin-top: 1rem;
+    }
+    .price{
+        width: auto;
+    }
+    .cart{
+        width: auto;
+    }
+    .wishlist-btn{
+        width: auto;
+    }
+    .single-image{
+        width: 100%;
+        height: auto;
+    }
+    .single-image img{
+        width:auto;
+        height: auto;
+    }
+    .cart-content{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        border:none
+    }
+    .description-content{
+        width: auto;
+    }
+    .single-description{
+        width: 18rem;
+        height: auto;
+    }
+
+}
+
+@media (min-width:426px) and (max-width:768px){
+    .cart-content{
+        margin-left: 6rem;
+    }
+}
+
 
 /* @media screen and (max-width: 425px){
     .single-title{

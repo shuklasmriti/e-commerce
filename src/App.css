@@ -23,6 +23,7 @@
 @import url(../src/Components/Pages/Wishlist/Wishlist.css);
 @import url(../src/Components/Slider/Slider.css);
 @import url(../src/Components/Modal/Modal.css);
+@import url(../src/Components/Pages/SearchPage/SearchPage.css);
 
 body {
   /* display: flex;

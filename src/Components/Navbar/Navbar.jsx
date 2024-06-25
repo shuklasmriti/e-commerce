@@ -1,16 +1,21 @@
 import React, { useContext } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FusionFindsLogo from "../Assets/logo2.png";
 import Badge from "@mui/material/Badge";
 // import Search from "../Search/Search";
 import { CiSearch } from "react-icons/ci";
 // import { FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { WishlistContext } from "../../context/WishlistContext";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 <link rel="stylesheet" href="./src/Components/Navbar/Navbar.css" />;
 
@@ -20,29 +25,27 @@ export const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+ 
 
-  const [searchResults, setSearchResults] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+
   const { cart } = useContext(CartContext);
   const { wishlist } = useContext(WishlistContext);
+  const [userData, setUserData] = useState(
+    JSON.parse(sessionStorage.getItem("userData"))
+  );
+  // console.log(userData);
+  const history = useNavigate();
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+const [dropdown,setDropdown]=useState(false);
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      fetch(`https://dummyjson.com/products/search?q=${inputValue}`)
-        .then((res) => res.json())
-        // .then(console.log);
-        .then((data) => {
-          setSearchResults(data?.results);
-        })
-        .catch((error) => {
-          console.error("Error fetching search results:", error);
-        });
-    }
+  
+
+  const logoutButtonHandler = () => {
+    sessionStorage.removeItem("userData");
+    setUserData("");
+    // history.push("/");
+    toast.success("Logout Successfully");
+    setDropdown(false);
   };
 
   return (
@@ -56,22 +59,34 @@ export const Navbar = () => {
       <button className="navbar-toggle" onClick={toggleMenu}>
         &#9776;
       </button>
-      <div className={`navbar-menu ${isOpen ? 'show' : ''}`} >
-        <div className="search">
+      <div className={`navbar-menu ${isOpen ? "show" : ""}`}>
+        {/* <div className="search">
           <input
             type="text"
-            value={inputValue}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyPress}
+            // value={inputValue}
+            // onChange={handleInputChange}
+            // onKeyDown={handleKeyPress}
             placeholder="Type something and press Enter"
           />
-          {/* {isLoading && <p>Loading...</p>} */}
+          {/* {isLoading && <p>Loading...</p>}
           <ul>
             {searchResults?.map((result) => (
               <li key={result?.id}>{result?.name}</li>
-            ))}
-          </ul>
-        </div>
+            ))} */}
+          {/* </ul> */}
+        {/* </div> */} 
+
+
+        <div className="search">
+                                <form role="search" method="get" action="/searchpage">
+                                    <div className="input-group">
+                                        <input type="search" placeholder="Search your product" className="form-control" name="search"/>
+                                        {/* <button className="btn bg-white" type="submit">
+                                            <i className="fa fa-search"></i>
+                                        </button> */}
+                                    </div>
+                                </form>
+                            </div>
 
         <div className="icons">
           <CiSearch size={23} className="icon1" />
@@ -98,11 +113,48 @@ export const Navbar = () => {
             </Badge>
           </Link>
 
-          <button className="but">
-            <Link className="link" to="/login">
-              Login
-            </Link>
-          </button>
+          <div className={userData ? "nav-item dropdown" : "nav-item"}>
+            {userData ? (
+              <Link
+                className="nav-link dropdown-toggle"
+                to="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                onClick={()=>setDropdown(!dropdown)}
+              >
+                <i>
+                  <FaUser />
+                </i>{" "}
+                {userData.username}
+              </Link>
+            ) : (
+              <Link to="/login" className="nav-link" id="login" role="button">
+                {" "}
+                <i>
+                  <FaUser />
+                </i>
+                Login
+              </Link>
+            )}
+                
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{display:dropdown?"block":"none"}}>
+                <div>
+                  <Link
+                    to="#"
+                    className="dropdown-item" 
+                    onClick={logoutButtonHandler}
+                  >
+                    <i>
+                      <FiLogOut />
+                    </i>{" "}
+                    Logout
+                  </Link>
+                </div>
+              </div>
+               
+          </div>
         </div>
       </div>
     </div>

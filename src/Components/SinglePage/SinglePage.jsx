@@ -18,7 +18,7 @@ export const SinglePage = () => {
   const {  wishlist ,handleAddToWishlist } = useContext(WishlistContext);
 
   const [categoryData, setCategoryData] = useState({});
-
+console.log(cart);
  
 
   useEffect(() => {
@@ -36,7 +36,8 @@ export const SinglePage = () => {
 
     fetchCategoryData();
   }, [id]);
-
+console.log(categoryData)
+console.log(wishlist)
   return (
     <div className="SinglePage">
       <div className="image-content">
@@ -48,20 +49,28 @@ export const SinglePage = () => {
           <div className="cart">
 
             
-            <button onClick={() =>  {  if (cart?.includes(categoryData)) {
+            <button onClick={() =>  {  if (cart?.find(item =>item.id===categoryData.id)) {
                   navigate('/cart')
                 } else {
                   addToCart(categoryData)
                 }
                 }}  >
-              {cart?.includes(categoryData) ? "Go To Cart" : "Add To Cart"}
+              {cart?.find((item)=>item.id===categoryData.id)
+             ? "Go To Cart" : "Add To Cart"}
           
          <FaShoppingCart size={17} />
             </button>
           </div>
           <div className="wishlist-btn">
-            <button onClick={() => handleAddToWishlist(categoryData)}>
-              {wishlist?.includes(categoryData)
+            <button onClick={() => {if (wishlist?.find(item=>item?.id===categoryData?.id))
+              navigate('/wishlist')
+            
+            else
+         handleAddToWishlist(categoryData);
+            }
+              
+            }>
+              {wishlist?.find(item=>item?.id===categoryData?.id)
                 ? "Remove "
                 : "Add to wishlist"}
               <FaHeart size={17} />
