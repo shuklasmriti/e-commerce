@@ -11,7 +11,6 @@ import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { WishlistContext } from "../../context/WishlistContext";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 <link rel="stylesheet" href="./src/Components/Navbar/Navbar.css" />;

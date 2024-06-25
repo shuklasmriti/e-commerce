@@ -39,7 +39,7 @@ console.log(searchResults);
       
  useEffect(()=>{
     handleKeyPress();
- },[])
+ },)
   
    
  return( 
