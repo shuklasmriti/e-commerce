@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import FusionFindsLogo from "../Assets/logo2.png";
 import Badge from "@mui/material/Badge";
-import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
@@ -16,11 +15,11 @@ import { toast } from "react-toastify";
 <link rel="stylesheet" href="./src/Components/Navbar/Navbar.css" />;
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
  
 
 
@@ -50,7 +49,7 @@ const [dropdown,setDropdown]=useState(false);
           <img src={FusionFindsLogo} alt="" />
         </Link>
       </div>
-      <div className={`navbar-menu ${isOpen ? "show" : ""}`}>
+      <div className="navbar-menu" >
         <div className="search">
              <form role="search" method="get" action="/searchpage">
                <div className="input-group">
