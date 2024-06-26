@@ -50,39 +50,17 @@ const [dropdown,setDropdown]=useState(false);
           <img src={FusionFindsLogo} alt="" />
         </Link>
       </div>
-
-      <button className="navbar-toggle" onClick={toggleMenu}>
-        &#9776;
-      </button>
       <div className={`navbar-menu ${isOpen ? "show" : ""}`}>
-        {/* <div className="search">
-          <input
-            type="text"
-            // value={inputValue}
-            // onChange={handleInputChange}
-            // onKeyDown={handleKeyPress}
-            placeholder="Type something and press Enter"
-          />
-          {/* {isLoading && <p>Loading...</p>}
-          <ul>
-            {searchResults?.map((result) => (
-              <li key={result?.id}>{result?.name}</li>
-            ))} */}
-          {/* </ul> */}
-        {/* </div> */} 
-
-
         <div className="search">
-                                <form role="search" method="get" action="/searchpage">
-                                    <div className="input-group">
-                                        <input type="search" placeholder="Search your product" className="form-control" name="search"/>
-                                       
-                                    </div>
-                                </form>
-                            </div>
+             <form role="search" method="get" action="/searchpage">
+               <div className="input-group">
+              <input type="search" placeholder="Search your product" className="form-control" name="search"/>
+              </div>
+              </form>
+            </div>
 
         <div className="icons">
-          <CiSearch size={23} className="icon1" />
+          {/* <CiSearch size={23} className="icon1" /> */}
           <Link className="link" to="/">
             <FaHome size={23} className="icon2" />
           </Link>
