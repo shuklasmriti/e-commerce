@@ -55,35 +55,10 @@ const [Razorpay] = useRazorpay();
       },
       handler: function (response) {
 
-        // console.log(response)
         toast.success('Payment Successful')
-          // console.log(response, "data in response")
-        // const paymentId = response.razorpay_payment_id
-
-        // console.log(paymentId, "data in paymentId")
-
-        // store in firebase 
-        // const orderInfo = {
-        //   // cartItems,
-        //   // addressInfo,
-        //   date: new Date().toLocaleString(
-        //     "en-US",
-        //     {
-        //       month: "short",
-        //       day: "2-digit",
-        //       year: "numeric",
-        //     }
-        //   ),
-        //   email: JSON.parse(localStorage.getItem("user")).user.email,
-        //   userid: JSON.parse(localStorage.getItem("user")).user.uid,
-        //   paymentId
-        // }
-
-        // try {
-        //   const result = addDoc(collection(fireDB, "orders"), orderInfo)
-        // } catch (error) {
-        //   console.log(error)
-        // }
+        
+    
+      
       },
 
       theme: {
@@ -96,17 +71,6 @@ const [Razorpay] = useRazorpay();
 
  
   const { cart,  removeFromCart ,modifyCartItemQuantity } = useContext(CartContext);
-//  const[isAdded,setIsAdded]=useState(false);
-
-  // const handleDelete = (id) => {
-  //   removeFromCart(id);
-
-  // };
-
- 
-
-
-
 
 
 const increment = (itemId) => {
@@ -135,20 +99,13 @@ const decrement = (itemId) => {
   return acc +(item.quantity||1);
  },0);
 
-  // const totalPrice = cart.reduce((acc, item) => {
-  //   const itemTotal = item?.price * item?.quantity * 80; 
-  //   return acc +itemTotal;
-  //   console.log(itemTotal);
-  
-  
-  // }, 0);
+
   return (
 
 <>
     <div className="cart">
     <div className="cart-body">
    
-
       {cart?.map((item)=>(
         <div className="cart-container" key={item?.id}>
         <div className="cart-image">
@@ -158,16 +115,14 @@ const decrement = (itemId) => {
        
 
         <div className="quant">
-          <button className="bt" onClick={() => increment(item.id)} >
-            +
-          </button>
-          {/* <div className="number">{item?.quantity}</div>
-           */}
-           <input className="number" type="text" value={item.quantity || 1} readOnly/>
-          <button className="bt" onClick={() => decrement(item.id)}>
+        <button className="bt" onClick={() => decrement(item.id)}>
             -
           </button>
-          <button onClick={()=>removeFromCart(item.id)}   >Delete</button>
+       <input className="number" type="text" value={item.quantity || 1} readOnly/>
+        <button className="bt2" onClick={() => increment(item.id)} >
+            +
+          </button>
+          <button className="delete" onClick={()=>removeFromCart(item.id)}   >Delete</button>
 
         </div>
 

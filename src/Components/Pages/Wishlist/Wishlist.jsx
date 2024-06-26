@@ -43,17 +43,17 @@ const handleDelete = (id) => {
       <Link className= 'link' to='/wishlist'  >
       Add To Cart
       </Link></button>
-      <button onClick={()=> handleDelete(item.id)}  >Delete</button>
+      <button  onClick={()=> handleDelete(item.id)}  >Delete</button>
       <button  >
         
         <Link className='link' to='/'>Home
         </Link></button>
-<h4>Price:Rs.{item?.price*80}</h4>
+<h4 className='price-of-item'>Price:Rs.{item?.price*80}</h4>
       </div>
   </div>
 </div>
 ))}
-  <p>Total items in wishlist: {wishlistCount}</p>
+  <p className='total'>Total items in wishlist: {wishlistCount}</p>
 
 </div>
 </>
