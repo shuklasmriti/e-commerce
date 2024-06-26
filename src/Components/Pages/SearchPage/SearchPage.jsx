@@ -44,7 +44,7 @@ console.log(searchResults);
  return( 
     <>
 {isLoading ? <h1>loading</h1>: 
-     <div className="CardContainer">
+     <div className="CardContainers">
    
  {searchResults?.map((obj)=>(
    
