@@ -1,15 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-
-<link rel="stylesheet" href="./src/Components/Footer/Footer.css" />
+ <link rel="stylesheet" href="./src/Components/Footer/Footer.css" /> 
 export const Footer = () => {
-
- 
-
 
   return (
     <>
@@ -35,17 +30,17 @@ export const Footer = () => {
               Online Shopping..
             </h3>
             <span> <Link className='link' to={"/mobile"}> Mobile</Link></span>
-            <span> <Link className='link' to={"/fashion"}>  Fashion</Link></span>
+            <span> <Link className='link' to={"/beauty"}>  Beauty</Link></span>
             <span> <Link className='link' to={"/grocery"}>  Grocery</Link></span>
-            <span> <Link className='link' to={"/lighting"}>  Lighting</Link></span>
-            <span> <Link className='link' to={"/appliances"}>  Appliances</Link></span>
+            {/* <span> <Link className='link' to={"/lighting"}>  Lighting</Link></span> */}
+            <span> <Link className='link' to={"/dresses"}> Dresses</Link></span>
             <span> <Link className='link' to={"/homeandfurniture"}>  Home & Furniture</Link></span>
-            <span> <Link className='link' to={"/toysandmore"} > Toys & more</Link></span>
+            <span> <Link className='link' to={"/bikes"} > Bikes</Link></span>
           </div>
 
           <div className="address">
             <h3>Address..</h3>
-            <p>
+            <p className='add-para'>
               FusionFinds pvt limited,
               Building alyssa,Begonia &
               Clove Embassy Tech Village,

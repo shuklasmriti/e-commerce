@@ -2,32 +2,34 @@
 .cart{
     /* background-color:green; */
     width: 100%;
-    /* margin-top: 10rem; */
+    margin-top: 10rem;
     height: auto;
+    display: flex;
 }
 
 .cart-body{
     width: 70%;
-    margin-top:10rem;
+    margin-top:2rem;
     /* background-color: red; */
      /* height: 100vh;  */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     /* flex-wrap: wrap; */
     min-height: calc(100vh - 25rem);
+    gap: 11px;
 }
 .cart-container{
     height:13rem;
     width: 80%;
-    border: 2px solid grey;
+    border: 1px solid #0b7a74 ;
     /* background-color: red; */
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
     /* margin-top: 2rem; */
     align-items: center;
-    padding-left: 2rem;
+    padding-left: 1rem;
     gap: 7rem;
 
     
@@ -40,13 +42,18 @@
     /* padding: 1rem; */
 }
 .cart-image{
-    width: 8rem;
+    
+    width: 11rem;
     height: 10rem;
-    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .cart-image img{
     width: 10rem;
     height: 10rem;
+    margin-top: 1rem;
 }
 
 .buy{
@@ -58,49 +65,72 @@
 .quant{
     width: 10rem;
     height: 4rem;
-    /* background-color:grey; */
+    /* background-color: grey; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 5rem;
+    padding-left: 24rem;
+    gap: 17px;
+    margin-top: -23rem;
 }
 .number{
-    width: 5rem;
-    height: 2rem;
-    background-color:rgb(194, 188, 188);
+    width: 1rem;
+    height: 1rem;
+    /* background-color:rgb(194, 188, 188); */
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 .bt{
     width: 2rem;
-    height: 2rem;
-    background-color: #0b7a74;
+    height: 1.6rem;
+    /* background-color: #0b7a74; */
+    border-radius: 50%;
+    border: 1px solid #0b7a74;
+    cursor: pointer;
+
 }
 .bt2{
     width: 2rem;
-    height: 2rem;
-    background-color: #0b7a74;
+    height: 1.6rem;
+    /* background-color: #0b7a74; */
+    border-radius: 50%;
+    border: 1px solid #0b7a74;
+    cursor: pointer;
 
 }
+.delete{
+    border: none;
+    background-color: white;
+
+}
+.delete-icon{
+
+    color:rgb(211, 62, 62) ;
+    width: 2em;
+    height: 2em;
+cursor: pointer;
+}
 .paisa h4{
-    width: 10rem;
-    height: 4rem;
-    /* background-color:grey; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 6rem;
+    height: 2rem;
+   
+    margin-top: 3rem;
+    
 }
 .payment-body{
-    /* background-color: red; */
+    /* border: 1px solid  #0b7a74; */
     width: 20%;
-    height: auto;
-    /* display: flex;
+    height: 14rem;
+    /* justify-content: center; */
+    border: 1px solid #0b7a74;
+    margin-top: 2rem;
+    gap: 37px;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
-    /* justify-content:center ; */
-    border: 1px solid grey;
-    margin-top: 10rem;
+    padding: 10px;
+
 }
 .payment-heading{
     display: flex;
@@ -126,10 +156,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     /* margin-top: 262px;
     margin-left: 37px;   */
 
 }
+
 
 
 @media  (max-width: 425px){
@@ -141,7 +173,7 @@
     }
     .cart-body {
         width: 100%;
-        margin-top: 7rem;
+        /* margin-top: 7rem; */
         /* background-color: chocolate; */
         display: flex;
         flex-direction: column;
@@ -155,12 +187,11 @@
         margin-left: 4rem;
     } */
     .cart-container{
-           height: 16rem;
-           width: 86%;
-           margin-left: 0rem;
-           /* gap: 16rem; */
-           /* background-color: yellow; */
+                 height: 15rem;
+           width: auto;
+           
            display: flex;
+           padding: 20px;
     
 
     }
@@ -182,28 +213,60 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* padding-left: 10rem; */
+        padding-left: 7rem;
         margin-top: -20rem;
-        margin-left: 8rem;
     }
     
     .paisa h4 {
-        margin-left: -2rem;
-        margin-top: -11rem;
+        
+            margin-left: 10rem;
+            margin-top: -11rem;
     }
     .payment-body {
-        /* background-color: red; */
-        width: 90%;
-        height: auto;
-        /* justify-content: center; */
-        border: 1px solid grey;
-        margin-top: 2rem;
+             /* background-color: red; */
+             width: auto;
+             height: auto;
+             /* justify-content: center; */
+             border: 1px solid #0b7a74;
+             /* margin-top: 2rem; */
+             gap: 37px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             margin: 3rem;
+    }
+    .payment-heading{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 19rem; */
+    font-size: larger;
+    font-weight: 900;
+    }
+    .payment-list span{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        font-size: large;
+        font-style: normal;
+        font-weight: 600;
+        margin-left: 12px;
+        margin-top: 8px;
+    }
+    .buy-now{
+        text-align: center;
+        border-radius: 0.25rem;
+        color: #fff;
+        font-weight: bold;
+        width: 6rem;
+        /* margin-left: 6rem; */
+        margin-bottom: 1rem;
     }
     .delete{
         width: 3rem;
     }
     .number{
-        width: 3rem;
+        width: 1rem;
 
     }
 
@@ -217,7 +280,7 @@
 }
 .cart-body {
     width: 70%;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     /* background-color: red; */
     /* height: 100vh; */
     display: flex;
@@ -226,8 +289,22 @@
     /* flex-wrap: wrap; */
     /* min-height: calc(100vh - 25rem); */
 }
+.cart-image{
+    margin-top: 2rem;
+}
+.paisa{
+    /* background-color: red; */
+    margin-top: -2rem;
+    display: flex;
+    flex-direction: row;
+    width: 5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: -5rem;
+}
 .cart-container {
-    height: 16rem;
+    height: 14rem;
     width: 89%;
     border: 2px solid grey;
     /* background-color: red; */
@@ -236,7 +313,7 @@
     flex-wrap: wrap;
     /* margin-top: 2rem; */
     align-items: center;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     gap: 7rem;
 }
 .quant {
@@ -246,25 +323,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 9rem;
-    margin-top: -21rem;
+    margin-left: -6rem;
+    margin-top: -27rem;
 }
-.paisa h4 {
-    width: 10rem;
-    height: 4rem;
-    /* background-color: grey; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -12rem;
-}
+
 .payment-body {
-    /* background-color: red; */
     width: 25%;
-    height: auto;
+    /* height: auto; */
     /* justify-content: center; */
-    border: 1px solid grey;
-    margin-top: 3rem;
+    /* border: 1px solid grey; */
+    /* margin-top: 3rem; */
+    border: 1px solid #0b7a74;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+.payment-heading{
+    font-size: larger;
+    font-weight: 700;
+}
+.payment-list span{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: large;
+    font-style: normal;
+    margin-left: 12px;
+    margin-top: 8px;
+}
+.buy-now-but{
+    background-color: #0b7a74;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #0b7a74;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+.cart-is-empty{
+    margin-left: 17rem;
+}
+
+}
+@media (min-width:769px) and (max-width:1440px){
+    .cart-is-empty{
+        margin-left: 30rem;
+    }
 
 }

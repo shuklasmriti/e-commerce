@@ -80,7 +80,7 @@ function Login() {
               className='username'
             />
             <div className='submit-cont'>
-              <button type='submit' className='sub-but' onClick={handleSubmit}>Login</button>
+              <button  type='submit' className='sub-but' onClick={handleSubmit}>Login</button>
             </div>
           </form>
         </div>

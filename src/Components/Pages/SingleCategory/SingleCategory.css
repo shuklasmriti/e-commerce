@@ -4,3 +4,8 @@
     /* background-color: rebeccapurple; */
     margin-top: 9rem;
 }
+.singleCategory h1{
+    text-align: center;
+    font-variant: petite-caps;
+    font-weight: 300;
+}

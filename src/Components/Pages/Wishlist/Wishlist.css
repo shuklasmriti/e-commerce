@@ -4,46 +4,86 @@
     /* background-color: blue; */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center;
     padding-left: 5rem;
     padding-top: 2rem;
-    gap:7rem;
+    gap:1rem;
     min-height: calc(100vh - 27rem);
 
+}
+.wish img{
+    width: 20rem;
+display: flex;
+align-items: center;
+justify-content: center;
+/* align-items: center; */
+}
+.wish-body{
+    border: 2px solid rgb(55, 120, 121);
+    width: 18rem;
 }
 
 .wish-heading{
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    color:rgb(55, 120, 121) ;
 }
 .wish-image{
     display: flex;
     justify-content: center;
 }
 
-.wish-card{
+/* .wish-card{
     /* background-color: red; */
-    width: 25rem;
-    height: 26rem;
-}
-.button{
-    display: flex;
-    /* padding-left: 5rem;
-    padding-top: 1rem; */
-    padding: 2px;
-    gap: 9px;
+    /* width: 25rem; */
+    /* height: 26rem; */
+/* } */ 
+
+button{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
     height: 2rem;
-    margin-left: 3rem;
-    width: 21rem;
-    background-color: #0b7a74;
+}
+.add-to-home{
+    width: 2em;
+    height: 2em;
+    color: rgb(55, 120, 121);
+
 
 }
+.add-to-delete{
+    width: 2em;
+    height: 2em;
+    color: rgb(55, 120, 121);
+
+}
+.add-to-delete:hover{
+    color: black;
+
+}
+.add-to-home:hover{
+    color: black;
+
+}
+.add-to-cart:hover{
+    color: black;
+}
+.add-to-cart{
+    width: 2em;
+    height: 2em;
+    color: rgb(55, 120, 121);
+
+}
+
 .total{
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    font-weight: 700;
+    margin-top: 0rem;
+    /* margin-left: -3rem; */
+    font-size: 21px;
+    font-weight: 500;
+    color: rgb(55, 120, 121);
 }
 @media (max-width:425px) {
     .wish {
@@ -58,19 +98,31 @@
         /* gap: 0rem; */
         /* min-height: calc(100vh - 27rem); */
     }
+    .wish-image{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
    
 .wish-card {
     /* background-color: red; */
-    width: 20rem;
+    /* width: 20rem; */
     height: 24rem;
+    margin-top: -4rem;
 }
 .buttons {
     display: flex;
     padding: 2px;
-    gap: 2px;
+    gap: 20px;
     height: 2rem;
-    margin-left: 0rem;
+    /* margin-left: 3rem; */
     width: 19rem;
+    align-items: center;
+    justify-content: center;
+}
+.price-of-item{
+    margin-top: 8px;
 }
 .total{
     display: flex;

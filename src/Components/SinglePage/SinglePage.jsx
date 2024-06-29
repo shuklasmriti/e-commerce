@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { useParams ,useNavigate} from "react-router-dom";
-
+import Loader from "../Pages/Loader/Loader";
 import { useState, useEffect } from "react";
 
 import { CartContext } from "../../context/CartContext";
@@ -18,7 +18,7 @@ export const SinglePage = () => {
   const {  wishlist ,handleAddToWishlist } = useContext(WishlistContext);
 
   const [categoryData, setCategoryData] = useState({});
-console.log(cart);
+  const[isLoading ,setIsLoading]=useState(true)
  
 
   useEffect(() => {
@@ -31,25 +31,30 @@ console.log(cart);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
+      finally{
+  setIsLoading(false);
+      }
     };
 
 
     fetchCategoryData();
   }, [id]);
-console.log(categoryData)
-console.log(wishlist)
+// console.log(categoryData)
+// console.log(wishlist)
   return (
     <div className="SinglePage">
+      {isLoading ? (<Loader/>):(
+        <>
       <div className="image-content">
         <div className="single-image">
           <img src={categoryData?.thumbnail} alt="" />
         </div>
         <div className="cart-content">
-          <div className="price">Price:Rs.{Math.round(categoryData?.price * 80)}</div>
-          <div className="cart">
+          <div className="price">Price:$ {(categoryData?.price )}</div>
+          <div className="go-to-cart">
 
             
-            <button onClick={() =>  {  if (cart?.find(item =>item.id===categoryData.id)) {
+            <button className="cart-btn" onClick={() =>  {  if (cart?.find(item =>item.id===categoryData.id)) {
                   navigate('/cart')
                 } else {
                   addToCart(categoryData)
@@ -62,13 +67,13 @@ console.log(wishlist)
             </button>
           </div>
           <div className="wishlist-btn">
-            <button onClick={() => {if (wishlist?.find(item=>item?.id===categoryData?.id))
+            <button className="wishlist-btn" onClick={() => {if (wishlist?.find(item=>item?.id===categoryData?.id))
               navigate('/wishlist')
             
             else
          handleAddToWishlist(categoryData);
             }
-              
+           
             }>
               {wishlist?.find(item=>item?.id===categoryData?.id)
                 ? "Remove "
@@ -81,7 +86,11 @@ console.log(wishlist)
       <div className="description-content">
         <div className="single-title">{categoryData?.title}</div>
         <div className="single-description">{categoryData?.description}</div>
+ <div className="discount">Discount:{categoryData?.discountPercentage}%</div>
+        
       </div>
+      </>
+      )}
     </div>
   );
 };

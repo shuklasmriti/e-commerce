@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from 'react-router-dom';
 import './SearchPage.css'
 import Cards from '../../Cards/Cards';
+import Loader from '../Loader/Loader';
 
 const SearchPage = () => {
   
@@ -11,14 +12,14 @@ const SearchPage = () => {
   
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    console.log(search);
-
+    
+// const [loading,setLoading]=useState(true);
     
     
 
-console.log(searchResults);
       
  useEffect(()=>{
+  setIsLoading(true);
   const handleKeyPress = (event) => {
     setIsLoading(true);
       fetch(`https://dummyjson.com/products/search?q=${search}`)
@@ -43,7 +44,8 @@ console.log(searchResults);
    
  return( 
     <>
-{isLoading ? <h1>loading</h1>: 
+{isLoading ? (<Loader/>): 
+searchResults.length >0 ? (
      <div className="CardContainers">
    
  {searchResults?.map((obj)=>(
@@ -53,15 +55,11 @@ console.log(searchResults);
  
  ))}
  
- </div>}
+ </div>):(
+<div className='not-found'><h1>No Product found!!</h1></div>  
+  
+ )}
  </>
- )
-
-
-
-
-
-
-}
-
+ );
+};
 export default SearchPage

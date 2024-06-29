@@ -64,7 +64,7 @@ width: 300px;
     height: 38px;
     gap: 40px;
     z-index: 1;
-    color: black;
+    color:  #0b7a74;
 }
 .but{
     width: 5rem;
@@ -115,17 +115,16 @@ width: 300px;
 }
 
 .nav-link{
-    color:black;
+    color: #0b7a74;
     text-decoration: none;
     padding: 10px 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
     transition: background-color 0.3s;
+    gap: 10px;
 }
-.nav-link:hover {
-    background-color: #555;
-}
+
 .dropdown-toggle::after {
     content: ' ▼';
     font-size: 0.8em;
@@ -267,7 +266,7 @@ border-radius: 20px;
     /* height: 38px; */
     gap: 18px;
     z-index: 1;
-    color: black;
+    /* color: black; */
     width:-webkit-fill-available;
 
     justify-content: center;
@@ -311,7 +310,6 @@ border-radius: 20px;
         height: 33px;
         gap: 26px;
         z-index: 1;
-        color: black;
         justify-content: center;
         align-items: center;
     }

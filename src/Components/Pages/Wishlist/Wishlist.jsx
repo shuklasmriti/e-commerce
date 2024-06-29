@@ -1,5 +1,9 @@
 import React,{useEffect,useState} from 'react'
 import { useContext } from 'react';
+import { FaShoppingCart } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { MdDelete, MdHeight } from "react-icons/md";
+
 // import { SinglePage } from '../../SinglePage/SinglePage';
 import { CartContext } from '../../../context/CartContext';
 import { WishlistContext } from '../../../context/WishlistContext';
@@ -32,29 +36,39 @@ const handleDelete = (id) => {
 {wishlist?.map((item)=>(
 <div className="wish-body">
   <div className="wish-card">
-    <div className="wish-heading">
-      Product
-    </div>
+    {/* <div className="wish-heading"> */}
+      {/* Product
+    </div> */}
     <div className="wish-image">
     <img src={item?.thumbnail} alt="" />
+<h4 className='price-of-item'>$ {item?.price}</h4>
+
     </div>
     <div className="buttons">
     <button  onClick={()=>addToCart(item)} >
       <Link className= 'link' to='/wishlist'  >
-      Add To Cart
+      <FaShoppingCart className='add-to-cart'/>
       </Link></button>
-      <button  onClick={()=> handleDelete(item.id)}  >Delete</button>
+      <button  onClick={()=> handleDelete(item.id)}  > <MdDelete className='add-to-delete'/> </button>
       <button  >
         
-        <Link className='link' to='/'>Home
+        <Link className='link' to='/'> <FaHome className='add-to-home'/>
         </Link></button>
-<h4 className='price-of-item'>Price:Rs.{item?.price*80}</h4>
       </div>
   </div>
 </div>
 ))}
-  <p className='total'>Total items in wishlist: {wishlistCount}</p>
+<div>
+  {wishlistCount <1 &&(
+  // <p className='total'>Your Wishlist is Empty!
+  
+  <img src="https://i.pinimg.com/originals/f6/e4/64/f6e464230662e7fa4c6a4afb92631aed.png" alt="" />
+  
+  // </p>
+  
+  )}
 
+  </div>
 </div>
 </>
 

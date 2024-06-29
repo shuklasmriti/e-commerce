@@ -1,48 +1,51 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink  } from "react-router-dom";
 <link rel="stylesheet" href="./src/Component/Navbar/Navbar2.css" />;
 
 export const Navbar2 = () => {
+  const getActiveStyle = ({ isActive }) => ({
+    color: isActive ? 'rgb(55, 120, 121)' : ''
+  });
   return (
     <>
       <div className="navbar2">
         <div className="cont">
           <div className="grocery">
-            <Link className="link" to={"/grocery"}>
+            <NavLink className="link" to={"/grocery"} style={getActiveStyle}>
               {" "}
               GROCERY
-            </Link>
+            </NavLink>
           </div>
           <div className="mobiles">
             {" "}
-            <Link className="link" to={"/mobile"}>
+            <NavLink className="link" to={"/mobile"}style={getActiveStyle}>
               {" "}
               MOBILES
-            </Link>
+            </NavLink>
           </div>
           <div className="beauty">
-            <Link className="link" to={"/beauty"}>
+            <NavLink className="link" to={"/beauty"}style={getActiveStyle}>
               BEAUTY-PRODUCTS
-            </Link>
+            </NavLink>
           </div>
           <div className="dresses">
-            <Link className="link" to={"/dresses"}>
+            <NavLink className="link" to={"/dresses"}style={getActiveStyle}>
               {" "}
               DRESSES
-            </Link>
+            </NavLink>
           </div>
 
           <div className="home&furniture">
-            <Link className="link" to={"/homeandfurniture"}>
+            <NavLink className="link" to={"/homeandfurniture"}style={getActiveStyle}>
               {" "}
               HOME & FURNITURE
-            </Link>
+            </NavLink>
           </div>
           <div className="beauty">
-            <Link className="link" to={"/bikes"}>
+            <NavLink className="link" to={"/bikes"}style={getActiveStyle}>
               {" "}
               BIKES
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

@@ -31,7 +31,6 @@ export default  function App() {
  <Navbar2/> 
 
 
-
 <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/about' element={<About/>}/>

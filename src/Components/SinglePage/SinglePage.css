@@ -19,6 +19,7 @@
     justify-content: center;
     align-items:center;
   gap: 1.5rem;
+  margin-top: 1rem;
 
     /* padding:10px; */
 }
@@ -65,7 +66,7 @@ align-items: center;
     align-items: center;
 }
 
-.cart{
+.go-to-cart{
     /* background-color: chartreuse; */
     width: 22rem;
     height: 3rem;
@@ -74,18 +75,53 @@ align-items: center;
     align-items: center;
  
 }
-button{
+.cart-btn{
     cursor: pointer;
     width: 8rem;
     background-color:  #0b7a74;
+    border: 2px solid  #0b7a74;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    gap: 8px;
+    border-radius: 10px;
+
 }
+.wishlist-btn{
+    cursor: pointer;
+    width: 8rem;
+    background-color:  #0b7a74;
+    border: 2px solid  #0b7a74;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    gap: 8px;
+    border-radius: 10px;
+}
+/* button{
+    cursor: pointer;
+    width: 8rem;
+    background-color:  #0b7a74;
+    border: 2px solid  #0b7a74;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    gap: 8px;
+    border-radius: 10px;
+} */
 .description-content{
     /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 1rem; */
+    gap: 1rem;
     height: 17rem;
     width: 23rem;
     margin-top: -13rem;
@@ -98,6 +134,7 @@ button{
     justify-content:left;
     align-items: center;
     font-size: larger;
+    font-weight: 600;
 }
 .single-description{
     /* background-color: red; */
@@ -106,6 +143,16 @@ button{
     justify-content:left;
     /* align-items: center; */
     height: 10rem;
+    font-size: medium;
+    font-weight: 400;
+    /* text-align: center; */
+    color: #0b7a74;
+}
+.discount{
+    font-size: medium;
+    font-weight: 400;
+    /* text-align: center; */
+    /* color: #0b7a74; */
 }
 
 
@@ -128,6 +175,12 @@ button{
         height: auto;
         gap: 1rem;
         margin-left: 0px;
+        margin-top: 1rem;
+    }
+    .single-image{
+        width: 100%;
+        height: auto;
+        border: 1px solid #0b7a74;
         margin-top: 1rem;
     }
     .price{
