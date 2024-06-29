@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import { useContext } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
-import { MdDelete, MdHeight } from "react-icons/md";
+import { MdDelete,  } from "react-icons/md";
 
 // import { SinglePage } from '../../SinglePage/SinglePage';
 import { CartContext } from '../../../context/CartContext';
