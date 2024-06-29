@@ -1,5 +1,5 @@
 .home{
-  height: 352px;
+  /* height: 352px; */
   margin-top: 141px;
   z-index: -1;
   overflow-x: hidden;
@@ -9,8 +9,3 @@
 }
 
 
-@media screen and (max-width: 480px){
-.home{
-  height: 280px;
-}
-}
