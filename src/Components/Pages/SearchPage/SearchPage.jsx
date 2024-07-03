@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import './SearchPage.css'
 import Cards from '../../Cards/Cards';
 import Loader from '../Loader/Loader';
-import useSearch from '../../../Hook/useSearch';
+// import useSearch from '../../../Hook/useSearch';
 const SearchPage = () => {
   
     const [queryParameters] = useSearchParams()
@@ -13,7 +13,7 @@ const SearchPage = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     // const [searchInput,setSearchInput]= useState('');
-    const {searchInput }=useSearch();
+    // const {searchInput }=useSearch();
 // const [loading,setLoading]=useState(true);
     
     

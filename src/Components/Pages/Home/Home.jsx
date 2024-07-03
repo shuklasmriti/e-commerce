@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import SimpleSlider from '../../Slider/Slider';
 import Loader from '../Loader/Loader';
-import useSearch from '../../../Hook/useSearch';
 import { CardContainer } from '../../Card-Container/CardContainer';
 <link rel="stylesheet" href="./Components/Pages/Home/Home.css" />
 export const Home = () => {
