@@ -20,7 +20,8 @@ import Login from './Components/Pages/Login/Login';
 import {Wishlist} from './Components/Pages/Wishlist/Wishlist';
 import Modal from './Components/Modal/Modal';
 import SearchPage from './Components/Pages/SearchPage/SearchPage';
-
+import PaymentSuccessful from './Components/Pages/PaymentSuccesful/PaymentSuccessful';
+import Order from './Components/Pages/Order/Order';
 export default  function App() {
   return (
     <>
@@ -50,7 +51,8 @@ export default  function App() {
 <Route path='/wishlist' element={<Wishlist/>}/>
 <Route path='/modal' element={<Modal/>}/>
 <Route path='/searchpage' element={<SearchPage/>}/>
-
+<Route path='/paymentsuccessful' element={<PaymentSuccessful/>}/>;
+<Route path='/order' element={<Order/>}/>;
 
   </Routes>
   <Footer/>

@@ -25,6 +25,8 @@
 @import url(../src/Components/Modal/Modal.css);
 @import url(../src/Components/Pages/SearchPage/SearchPage.css);
 @import url(../src/Components/Pages/Loader/Loader.css);
+@import url(../src/Components/Pages/PaymentSuccesful/PaymentSuccessful.css);
+@import url(../src/Components/Pages/Order/Order.css);
 
 body {
   /* display: flex;

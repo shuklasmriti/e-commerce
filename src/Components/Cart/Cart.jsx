@@ -6,6 +6,7 @@ import { CartContext } from "../../context/CartContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useRazorpay from "react-razorpay";
+import { useNavigate } from "react-router-dom";
 
 export const Cart = () => {
 
@@ -14,6 +15,7 @@ export const Cart = () => {
   const [pincode, setPincode] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [Razorpay] = useRazorpay();
+  const navigate=useNavigate();
   const buyNow = async () => {
     if (name === "" || address === "" || pincode === "" || phoneNumber === "") {
       return toast.error("All fields are required", {
@@ -45,6 +47,7 @@ export const Cart = () => {
       },
       handler: function (response) {
         toast.success("Payment Successful");
+        navigate('/paymentSuccessful')
       },
 
       theme: {

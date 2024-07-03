@@ -5,14 +5,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 5rem;
-    padding-top: 2rem;
     gap:1rem;
     min-height: calc(100vh - 27rem);
 
 }
 .wish img{
-    width: 20rem;
+    /* width: 20rem; */
 display: flex;
 align-items: center;
 justify-content: center;
@@ -20,7 +18,8 @@ justify-content: center;
 }
 .wish-body{
     border: 2px solid rgb(55, 120, 121);
-    width: 18rem;
+    /* width: 18rem; */
+    margin-top: 1rem;
 }
 
 .wish-heading{
@@ -32,13 +31,18 @@ justify-content: center;
 .wish-image{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* .wish-card{
+.wish-card{
     /* background-color: red; */
-    /* width: 25rem; */
-    /* height: 26rem; */
-/* } */ 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
 
 button{
     background-color: white;
@@ -108,7 +112,7 @@ button{
 .wish-card {
     /* background-color: red; */
     /* width: 20rem; */
-    height: 24rem;
+    /* height: 24rem; */
     margin-top: -4rem;
 }
 .buttons {
@@ -140,12 +144,14 @@ button{
 @media (min-width:426px) and (max-width:768px) {
     .wish{
         gap: 4rem;
+   padding: 2rem;
+
     }
     .wish-card {
         /* background-color: red; */
             /* background-color: red; */
-            width: 24rem;
-            height: 28rem;
+            /* width: 24rem;
+            height: 28rem; */
         
     }
     .total{

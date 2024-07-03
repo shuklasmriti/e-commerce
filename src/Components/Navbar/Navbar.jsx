@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { WishlistContext } from "../../context/WishlistContext";
 import { toast } from "react-toastify";
-
+import useSearch from "../../Hook/useSearch";
 <link rel="stylesheet" href="./src/Components/Navbar/Navbar.css" />;
 
 export const Navbar = () => {
@@ -20,7 +20,7 @@ export const Navbar = () => {
   // const toggleMenu = () => {
   //   setIsOpen(!isOpen);
   // };
- 
+ const {  searchInput,searchChangeHandeler }=useSearch()
 
 
   const { cart } = useContext(CartContext);
@@ -53,7 +53,7 @@ const [dropdown,setDropdown]=useState(false);
         <div className="search">
              <form role="search" method="get" action="/searchpage">
                <div className="input-group">
-              <input type="search" placeholder="Search your product" className="form-control" name="search"/>
+              <input value={searchInput} type="text" placeholder="Search your product" className="form-control" name="search" onChange={searchChangeHandeler} />
               </div>
               </form>
             </div>
