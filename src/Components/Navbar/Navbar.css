@@ -61,12 +61,12 @@ border-radius: 20px;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: red;
+    /* background-color: red; */
     padding: 10px;
-    border: 1px solid yellow;
+    border: 1px solid  #49817e;
 }
 .dropdown-menu .dropdown-item {
-    color: white;
+    color: black;
     text-decoration: none;
     display: block;
     padding: 5px 0;
