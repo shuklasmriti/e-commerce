@@ -15,7 +15,7 @@ export const SinglePage = () => {
   const navigate = useNavigate();
 
   const { addToCart, cart } = useContext(CartContext);
-  const { wishlist, handleAddToWishlist } = useContext(WishlistContext);
+  const { wishlist, handleAddToWishlist,removeFromWishlist } = useContext(WishlistContext);
 
   const [categoryData, setCategoryData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -77,11 +77,14 @@ export const SinglePage = () => {
                   <button
                     className="wishlist-btn"
                     onClick={() => {
-                      if (
-                        wishlist?.find((item) => item?.id === categoryData?.id)
-                      )
-                        navigate("/wishlist");
-                      else handleAddToWishlist(categoryData);
+                      if (wishlist?.find((item) => item?.id === categoryData?.id)){
+                        // navigate("/wishlist");
+                        removeFromWishlist(categoryData.id)
+                      }else {
+                        handleAddToWishlist(categoryData);
+                        
+
+                      }
                     }}
                   >
                     {wishlist?.find((item) => item?.id === categoryData?.id)
@@ -97,16 +100,8 @@ export const SinglePage = () => {
               <div className="single-description">
                 {categoryData?.description}
               </div>
-              {/* <div className="discount">Discount:{categoryData?.discountPercentage}%</div> */}
             </div>
-          {/* </div> */}
-
-          {/* <div className="description-content">
-        <div className="single-title">{categoryData?.title}</div>
-        <div className="single-description">{categoryData?.description}</div>
- <div className="discount">Discount:{categoryData?.discountPercentage}%</div>
         
-      </div> */}
         </>
       )}
     </div>
